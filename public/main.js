@@ -10,5 +10,9 @@ update.addEventListener('click', _ => {
             name: 'Darth Vadar',
             quote: 'This is Changing'
         })
+    }).then(res => {
+        if (res.ok) return res.json()
+    }).then(response => {
+        console.log(response)
     })
 })
